@@ -1,7 +1,14 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import { globalRegister } from '@/global'
+
+import App from '@/App.vue'
 
 import router from '@/router'
 import store from '@/store'
 
-createApp(App).use(router).use(store).mount('#app')
+const app = createApp(App)
+
+// 注册 element-plus
+app.use(globalRegister).use(router).use(store)
+
+app.mount('#app')

@@ -3,7 +3,9 @@
     <h2>{{ $store.state.name }}</h2>
     <router-link to="/login">登录</router-link>
     <router-link to="/main">首页</router-link>
-    <router-view></router-view>
+    <router-view />
+    <el-button>11111</el-button>
+    <el-button type="danger">11111</el-button>
   </div>
 </template>
 
@@ -11,8 +13,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'App',
-  components: {}
+  name: 'App'
 })
 </script>
 
